@@ -5,9 +5,21 @@ import binance.Candlestick;
 import java.util.List;
 
 public class StochasticCalculator {
+    int threshHold;
 
-    boolean calc(List<Candlestick> candlesticks){
+    public StochasticCalculator(int threshHold) {
+        this.threshHold = threshHold;
+    }
 
-        return false;
+
+    boolean calc(List<Candlestick> candlesticks) {
+        if (isLessThenThreshHold(candlesticks))
+            return false;
+        else
+            return true;
+    }
+
+    private boolean isLessThenThreshHold(List<Candlestick> candlesticks) {
+        return candlesticks.size() < threshHold;
     }
 }
