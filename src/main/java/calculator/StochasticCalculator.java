@@ -27,29 +27,12 @@ public class StochasticCalculator {
                 return Advice.BUY;
         }
     }
-
-    private boolean isRedAboveBlue(double result) {
-    return result < 0;
-    }
-
-    private boolean isCross(double result) {
-    return result == 0;
+    private boolean isLessThenThreshHold(List<Candlestick> candlesticks) {
+        return candlesticks.size() < threshHold;
     }
 
     private double getStochasticCalc(List<Candlestick> candlesticks) {
         return getBlueValueForLastCandle(candlesticks) - getRedValueForLastCandle(candlesticks);
-    }
-
-    private double getRedValueForLastCandle(List<Candlestick> candlesticks) {
-        return average(
-                getBlueValueForLastCandle(candlesticks),
-                getBlueValueForLastCandle(candlesticks.subList(0, candlesticks.size() - 1)),
-                getBlueValueForLastCandle(candlesticks.subList(0, candlesticks.size() - 2))
-        );
-    }
-
-    private double average(double firstValue, double secondValue, double thiredValue) {
-        return (firstValue + secondValue + thiredValue / 3);
     }
 
     private double getBlueValueForLastCandle(List<Candlestick> candlesticks) {
@@ -88,7 +71,25 @@ public class StochasticCalculator {
         return candlesticks.get(candlesticks.size() - 1);
     }
 
-    private boolean isLessThenThreshHold(List<Candlestick> candlesticks) {
-        return candlesticks.size() < threshHold;
+
+
+    private double getRedValueForLastCandle(List<Candlestick> candlesticks) {
+        return average(
+                getBlueValueForLastCandle(candlesticks),
+                getBlueValueForLastCandle(candlesticks.subList(0, candlesticks.size() - 1)),
+                getBlueValueForLastCandle(candlesticks.subList(0, candlesticks.size() - 2))
+        );
+    }
+
+    private double average(double firstValue, double secondValue, double thirdValue) {
+        return (firstValue + secondValue + thirdValue / 3);
+    }
+
+    private boolean isRedAboveBlue(double result) {
+        return result < 0;
+    }
+
+    private boolean isCross(double result) {
+        return result == 0;
     }
 }
