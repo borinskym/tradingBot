@@ -39,19 +39,19 @@
       <file leaf-file-name="StochasticCalculator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
               <folding>
                 <element signature="e#256#257#0" expanded="true" />
                 <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#855#856#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
-                <element signature="e#2952#2953#0" expanded="true" />
-                <element signature="e#2985#2986#0" expanded="true" />
-                <element signature="e#3031#3032#0" expanded="true" />
-                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#1444#1445#0" expanded="true" />
+                <element signature="e#1508#1509#0" expanded="true" />
+                <element signature="e#2960#2961#0" expanded="true" />
+                <element signature="e#2993#2994#0" expanded="true" />
+                <element signature="e#3039#3040#0" expanded="true" />
+                <element signature="e#3073#3074#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,8 +60,8 @@
       <file leaf-file-name="StochasticCalculatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="98">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -422,9 +422,9 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/calculator/StochasticAdvice.java" />
-        <option value="$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/binance/Candlestick.java" />
         <option value="$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java" />
       </list>
     </option>
   </component>
@@ -548,7 +548,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold">
+  <component name="RunManager" selected="JUnit.StochasticCalculatorTest.shouldBeOne">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -569,6 +569,31 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration name="StochasticCalculatorTest.shouldBeOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tradingBot_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
+      <option name="METHOD_NAME" value="shouldBeOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="StochasticCalculatorTest.shouldFailForEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -582,31 +607,6 @@
       <option name="PACKAGE_NAME" value="calculator" />
       <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
       <option name="METHOD_NAME" value="shouldFailForEmptyList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="StochasticCalculatorTest.shouldFailForRedAboveBlue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="calculator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="tradingBot_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="calculator" />
-      <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
-      <option name="METHOD_NAME" value="shouldFailForRedAboveBlue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -756,18 +756,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForEmptyList" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForRedAboveBlue" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForEmptyList" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldSellForRedAboveBlue" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForEmptyList" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldSellForRedAboveBlue" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldBeOne" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldSellForRedAboveBlue" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForEmptyList" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForEmptyList" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForRedAboveBlue" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldBeOne" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldSellForRedAboveBlue" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForEmptyList" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForEmptyList" />
       </list>
     </recent_temporary>
   </component>
@@ -794,32 +794,32 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StochasticCalculatorTest_shouldFailForEmptyList - 2018.09.29 at 02h 37m 09s.xml">
-      <configuration name="StochasticCalculatorTest.shouldFailForEmptyList" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 36m 33s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldFailForRedAboveBlue - 2018.09.29 at 01h 19m 15s.xml">
-      <configuration name="StochasticCalculatorTest.shouldFailForRedAboveBlue" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 37m 01s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 02h 38m 21s.xml">
-      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 37m 11s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 02h 38m 34s.xml">
-      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 38m 13s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 03h 35m 43s.xml">
-      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 38m 23s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 41m 02s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StochasticCalculatorTest_shouldBeOne - 2018.09.29 at 04h 41m 13s.xml">
+      <configuration name="StochasticCalculatorTest.shouldBeOne" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 03h 39m 05s.xml">
       <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 03h 39m 53s.xml">
       <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldStayForEmptyList - 2018.09.29 at 02h 38m 13s.xml">
-      <configuration name="StochasticCalculatorTest.shouldStayForEmptyList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldStayForLessThenThreshHold - 2018.09.29 at 02h 38m 17s.xml">
-      <configuration name="StochasticCalculatorTest.shouldStayForLessThenThreshHold" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StochasticCalculatorTest_shouldStayForLessThenThreshHold - 2018.09.29 at 03h 40m 13s.xml">
       <configuration name="StochasticCalculatorTest.shouldStayForLessThenThreshHold" configurationId="JUnit" />
@@ -879,14 +879,14 @@
           <folding>
             <element signature="e#256#257#0" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#2985#2986#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#2960#2961#0" expanded="true" />
+            <element signature="e#2993#2994#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
+            <element signature="e#3073#3074#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -955,8 +955,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="98">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -965,19 +965,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
           <folding>
             <element signature="e#256#257#0" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#2985#2986#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#2960#2961#0" expanded="true" />
+            <element signature="e#2993#2994#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
+            <element signature="e#3073#3074#0" expanded="true" />
           </folding>
         </state>
       </provider>

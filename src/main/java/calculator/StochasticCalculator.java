@@ -27,6 +27,7 @@ public class StochasticCalculator {
                 return Advice.BUY;
         }
     }
+
     private boolean isLessThenThreshHold(List<Candlestick> candlesticks) {
         return candlesticks.size() < threshHold;
     }
@@ -50,7 +51,7 @@ public class StochasticCalculator {
     private double getHighestOfInterval(List<Candlestick> candlesticks) {
         double result = getCurrentCandle(candlesticks).getLow();
         for (int i = 1; i < 14; i++) {
-            double currLow = candlesticks.get(candlesticks.size() - i).getHigh();
+            double currLow = candlesticks.get(candlesticks.size() - 1 - i).getHigh();
             if (currLow > result)
                 result = currLow;
         }
@@ -60,7 +61,7 @@ public class StochasticCalculator {
     private double getLowestOfInterval(List<Candlestick> candlesticks) {
         double result = getCurrentCandle(candlesticks).getLow();
         for (int i = 1; i < 14; i++) {
-            double currLow = candlesticks.get(candlesticks.size() - i).getLow();
+            double currLow = candlesticks.get(candlesticks.size() - 1 - i).getLow();
             if (currLow < result)
                 result = currLow;
         }
@@ -70,7 +71,6 @@ public class StochasticCalculator {
     private Candlestick getCurrentCandle(List<Candlestick> candlesticks) {
         return candlesticks.get(candlesticks.size() - 1);
     }
-
 
 
     private double getRedValueForLastCandle(List<Candlestick> candlesticks) {

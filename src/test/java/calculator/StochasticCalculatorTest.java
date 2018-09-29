@@ -11,24 +11,25 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class StochasticCalculatorTest {
-    StochasticCalculator stochasticCalculator =  new StochasticCalculator(16);
+    StochasticCalculator stochasticCalculator = new StochasticCalculator(16);
+
     @Test
-    public void shouldStayForEmptyList(){
-       assertEquals(stochasticCalculator.calc(Collections.EMPTY_LIST)
-               ,StochasticCalculator.Advice.STAY);
+    public void shouldStayForEmptyList() {
+        assertEquals(stochasticCalculator.calc(Collections.EMPTY_LIST)
+                , StochasticCalculator.Advice.STAY);
     }
 
     @Test
-    public void shouldStayForLessThenThreshHold(){
+    public void shouldStayForLessThenThreshHold() {
         assertEquals(stochasticCalculator.calc(Collections.singletonList(Candlestick.builder().build()))
-                ,StochasticCalculator.Advice.STAY);
-    }
-    @Test
-    public void shouldSellForRedAboveBlue(){
-        assertEquals(stochasticCalculator.calc(negativeExample())
-                ,StochasticCalculator.Advice.SELL);
+                , StochasticCalculator.Advice.STAY);
     }
 
+    @Test
+    public void shouldSellForRedAboveBlue() {
+        assertEquals(stochasticCalculator.calc(negativeExample())
+                , StochasticCalculator.Advice.SELL);
+    }
 
 
     public List<Candlestick> negativeExample() {
