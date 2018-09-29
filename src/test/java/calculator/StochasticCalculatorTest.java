@@ -13,22 +13,121 @@ import static org.junit.Assert.*;
 public class StochasticCalculatorTest {
     StochasticCalculator stochasticCalculator =  new StochasticCalculator(16);
     @Test
-    public void shouldFailForEmptyList(){
-       assertFalse(stochasticCalculator.calc(Collections.EMPTY_LIST));
+    public void shouldStayForEmptyList(){
+       assertEquals(stochasticCalculator.calc(Collections.EMPTY_LIST)
+               ,StochasticCalculator.Advice.STAY);
     }
 
     @Test
-    public void shouldFailForLessThenThreshHold(){
-        assertFalse(stochasticCalculator.calc(Collections.singletonList(new Candlestick())));
+    public void shouldStayForLessThenThreshHold(){
+        assertEquals(stochasticCalculator.calc(Collections.singletonList(Candlestick.builder().build()))
+                ,StochasticCalculator.Advice.STAY);
     }
     @Test
-    public void shouldFailForRedAboveBlue(){
-
+    public void shouldSellForRedAboveBlue(){
+        assertEquals(stochasticCalculator.calc(negativeExample())
+                ,StochasticCalculator.Advice.SELL);
     }
-    public List<Candlestick> negativeExample(){
-       return Arrays.asList(
+
+
+
+    public List<Candlestick> negativeExample() {
+        return Arrays.asList(
                 Candlestick.builder()
-                        .low(0.5)
+                        .open(6445.11000000)
+                        .high(6447.50000000)
+                        .low(6379.70000000)
+                        .close(6390.50000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6390.50000000)
+                        .high(6476.87000000)
+                        .low(6385.00000000)
+                        .close(6455.83000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6455.88000000)
+                        .high(6532.57000000)
+                        .low(6429.00000000)
+                        .close(6528.58000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6528.64000000)
+                        .high(6455.22000000)
+                        .low(6379.70000000)
+                        .close(6544.51000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6542.55000000)
+                        .high(6557.99000000)
+                        .low(6485.48000000)
+                        .close(6492.11000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6490.43000000)
+                        .high(6515.00000000)
+                        .low(6430.00000000)
+                        .close(6465.12000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6467.84000000)
+                        .high(6530.00000000)
+                        .low(6465.00000000)
+                        .close(6508.47000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6510.99000000)
+                        .high(6518.40000000)
+                        .low(6450.00000000)
+                        .close(6461.17000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6460.01000000)
+                        .high(6513.63000000)
+                        .low(6434.00000000)
+                        .close(6489.87000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6488.93000000)
+                        .high(6483.57000000)
+                        .low(6379.70000000)
+                        .close(6498.97000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6498.97000000)
+                        .high(6684.00000000)
+                        .low(6487.65000000)
+                        .close(6669.36000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6669.36000000)
+                        .high(6750.00000000)
+                        .low(6663.30000000)
+                        .close(6689.13000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6689.12000000)
+                        .high(6736.40000000)
+                        .low(6680.00000000)
+                        .close(6702.26000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6702.26000000)
+                        .high(6814.80000000)
+                        .low(6687.00000000)
+                        .close(6788.99000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6786.71000000)
+                        .high(6787.73000000)
+                        .low(6580.00000000)
+                        .close(6657.73000000)
+                        .build(),
+                Candlestick.builder()
+                        .open(6657.73000000)
+                        .high(6695.86000000)
+                        .low(6582.00000000)
+                        .close(6666.96000000)
                         .build()
         );
     }
@@ -36,8 +135,8 @@ public class StochasticCalculatorTest {
 
     /**
      *
-     *
-     [16
+     * Bad Example Data
+     [16 //
      1537920000000,
      "6445.11000000",
      "6447.50000000",
@@ -51,7 +150,7 @@ public class StochasticCalculatorTest {
      "19119966.16158339",
      "0"
      ],
-     [15
+     [15 //
      1537934400000,
      "6390.50000000",
      "6476.87000000",
@@ -65,7 +164,7 @@ public class StochasticCalculatorTest {
      "16359271.71217387",
      "0"
      ],
-     [14
+     [14 //
      1537948800000,
      "6455.88000000",
      "6532.57000000",
@@ -79,7 +178,7 @@ public class StochasticCalculatorTest {
      "18596143.78048249",
      "0"
      ],
-     *   [13
+     *   [13 //
      1537963200000,
      "6528.64000000",
      "6557.81000000",
@@ -93,7 +192,7 @@ public class StochasticCalculatorTest {
      "26510485.16056032",
      "0"
      ],
-     [12
+     [12 //
      1537977600000,
      "6542.55000000",
      "6557.99000000",
@@ -107,7 +206,7 @@ public class StochasticCalculatorTest {
      "22342875.61644140",
      "0"
      ],
-     [11
+     [11 //
      1537992000000,
      "6490.43000000",
      "6515.00000000",
@@ -121,7 +220,7 @@ public class StochasticCalculatorTest {
      "19041092.21822054",
      "0"
      ],
-     [10
+     [10 //
      1538006400000,
      "6467.84000000",
      "6530.00000000",
@@ -135,7 +234,7 @@ public class StochasticCalculatorTest {
      "17646913.64626881",
      "0"
      ],
-     [9
+     [9 //
      1538020800000,
      "6510.99000000",
      "6518.40000000",
@@ -149,7 +248,7 @@ public class StochasticCalculatorTest {
      "8699349.10759960",
      "0"
      ],
-     [8
+     [8 //
      1538035200000,
      "6460.01000000",
      "6513.63000000",
@@ -163,7 +262,7 @@ public class StochasticCalculatorTest {
      "17447850.51030659",
      "0"
      ],
-     [7
+     [7 //
      1538049600000,
      "6488.93000000",
      "6540.00000000",
@@ -177,7 +276,7 @@ public class StochasticCalculatorTest {
      "22289112.20195485",
      "0"
      ],
-     [6
+     [6 //
      1538064000000,
      "6498.97000000",
      "6684.00000000",
@@ -191,7 +290,7 @@ public class StochasticCalculatorTest {
      "23943076.13486902",
      "0"
      ],
-     [5
+     [5 //
      1538078400000,
      "6669.36000000",
      "6750.00000000",
@@ -205,7 +304,7 @@ public class StochasticCalculatorTest {
      "30625649.40761102",
      "0"
      ],
-     [4
+     [4 //
      1538092800000,
      "6689.12000000",
      "6736.40000000",
@@ -219,7 +318,7 @@ public class StochasticCalculatorTest {
      "26727634.62591270",
      "0"
      ],
-     [3
+     [3 //
      1538107200000,
      "6702.26000000",
      "6814.80000000",
@@ -233,7 +332,7 @@ public class StochasticCalculatorTest {
      "30607303.66487949",
      "0"
      ],
-     [2
+     [2 //
      1538121600000,
      "6786.71000000",
      "6787.73000000",

@@ -39,27 +39,31 @@
       <file leaf-file-name="StochasticCalculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="658">
+              <caret line="79" column="65" lean-forward="false" selection-start-line="79" selection-start-column="65" selection-end-line="79" selection-end-column="65" />
               <folding>
-                <element signature="e#179#180#0" expanded="true" />
-                <element signature="e#223#224#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2053#2054#0" expanded="true" />
+                <element signature="e#3003#3004#0" expanded="true" />
+                <element signature="e#3058#3059#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StochasticCalculatorTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StochasticCalculatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="466">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +72,8 @@
       <file leaf-file-name="Candlestick.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/binance/Candlestick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="179">
+              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
-              <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -103,6 +107,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -414,11 +419,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/binance/Candlestick.java" />
-        <option value="$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/calculator/StochasticAdvice.java" />
+        <option value="$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binance/Candlestick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java" />
       </list>
     </option>
   </component>
@@ -542,7 +548,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StochasticCalculatorTest">
+  <component name="RunManager" selected="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -563,7 +569,7 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="StochasticCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StochasticCalculatorTest.shouldFailForEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="calculator.*" />
@@ -575,32 +581,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="calculator" />
       <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="StochasticCalculatorTest.shouldReturnFalseForEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="calculator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="tradingBot_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="calculator" />
-      <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
-      <option name="METHOD_NAME" value="shouldReturnFalseForEmptyList" />
+      <option name="METHOD_NAME" value="shouldFailForEmptyList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -613,7 +594,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StochasticCalculatorTest.shouldFailForRedAboveBlue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="calculator.*" />
@@ -625,7 +606,82 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="calculator" />
       <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
-      <option name="METHOD_NAME" value="shouldReturnFalseForLessThenThreshHold" />
+      <option name="METHOD_NAME" value="shouldFailForRedAboveBlue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tradingBot_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
+      <option name="METHOD_NAME" value="shouldSellForRedAboveBlue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="StochasticCalculatorTest.shouldStayForEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tradingBot_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
+      <option name="METHOD_NAME" value="shouldStayForEmptyList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="StochasticCalculatorTest.shouldStayForLessThenThreshHold" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tradingBot_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.StochasticCalculatorTest" />
+      <option name="METHOD_NAME" value="shouldStayForLessThenThreshHold" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -698,16 +754,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldReturnFalseForEmptyList" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForEmptyList" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForRedAboveBlue" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForEmptyList" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldSellForRedAboveBlue" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldReturnFalseForEmptyList" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForLessThenThreshHold" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldSellForRedAboveBlue" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldStayForEmptyList" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForEmptyList" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StochasticCalculatorTest.shouldFailForRedAboveBlue" />
       </list>
     </recent_temporary>
   </component>
@@ -734,35 +794,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StochasticCalculatorTest - 2018.09.28 at 18h 26m 18s.xml">
-      <configuration name="StochasticCalculatorTest" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldFailForEmptyList - 2018.09.29 at 02h 37m 09s.xml">
+      <configuration name="StochasticCalculatorTest.shouldFailForEmptyList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest - 2018.09.28 at 18h 33m 55s.xml">
-      <configuration name="StochasticCalculatorTest" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldFailForRedAboveBlue - 2018.09.29 at 01h 19m 15s.xml">
+      <configuration name="StochasticCalculatorTest.shouldFailForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForEmptyList - 2018.09.28 at 18h 21m 41s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForEmptyList" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 02h 38m 21s.xml">
+      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForEmptyList - 2018.09.28 at 18h 22m 39s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForEmptyList" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 02h 38m 34s.xml">
+      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForEmptyList - 2018.09.28 at 18h 24m 35s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForEmptyList" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 03h 35m 43s.xml">
+      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForLessThenThreshHold - 2018.09.28 at 18h 19m 52s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 03h 39m 05s.xml">
+      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForLessThenThreshHold - 2018.09.28 at 18h 22m 43s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldSellForRedAboveBlue - 2018.09.29 at 03h 39m 53s.xml">
+      <configuration name="StochasticCalculatorTest.shouldSellForRedAboveBlue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForLessThenThreshHold - 2018.09.28 at 18h 24m 39s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldStayForEmptyList - 2018.09.29 at 02h 38m 13s.xml">
+      <configuration name="StochasticCalculatorTest.shouldStayForEmptyList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForLessThenThreshHold - 2018.09.28 at 18h 25m 00s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldStayForLessThenThreshHold - 2018.09.29 at 02h 38m 17s.xml">
+      <configuration name="StochasticCalculatorTest.shouldStayForLessThenThreshHold" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StochasticCalculatorTest_shouldReturnFalseForLessThenThreshHold - 2018.09.28 at 18h 28m 06s.xml">
-      <configuration name="StochasticCalculatorTest.shouldReturnFalseForLessThenThreshHold" configurationId="JUnit" />
+    <history-entry file="StochasticCalculatorTest_shouldStayForLessThenThreshHold - 2018.09.29 at 03h 40m 13s.xml">
+      <configuration name="StochasticCalculatorTest.shouldStayForLessThenThreshHold" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -771,24 +831,25 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17395833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11354167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17864583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -796,7 +857,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -806,7 +866,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -815,10 +877,16 @@
         <state relative-caret-position="189">
           <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+            <element signature="e#3003#3004#0" expanded="true" />
+            <element signature="e#3058#3059#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,43 +915,6 @@
           <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/binance/Candlestick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -899,8 +930,55 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/StochasticAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/binance/Candlestick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/StochasticCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="79" column="65" lean-forward="false" selection-start-line="79" selection-start-column="65" selection-end-line="79" selection-end-column="65" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+            <element signature="e#3003#3004#0" expanded="true" />
+            <element signature="e#3058#3059#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/calculator/StochasticCalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
