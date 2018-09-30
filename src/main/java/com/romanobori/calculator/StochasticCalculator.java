@@ -1,5 +1,6 @@
 package com.romanobori.calculator;
 
+
 import com.romanobori.binance.Candlestick;
 
 import java.util.List;
@@ -7,7 +8,6 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class StochasticCalculator {
-    enum Advice {BUY, SELL, STAY}
 
     private int threshHold;
 

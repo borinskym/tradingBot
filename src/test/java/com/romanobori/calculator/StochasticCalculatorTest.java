@@ -7,25 +7,27 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 public class StochasticCalculatorTest {
     StochasticCalculator stochasticCalculator = new StochasticCalculator(16);
 
     @Test
     public void shouldStayForEmptyList() {
         assertEquals(stochasticCalculator.calc(Collections.EMPTY_LIST)
-                , StochasticCalculator.Advice.STAY);
+                , Advice.STAY);
     }
 
     @Test
     public void shouldStayForLessThenThreshHold() {
         assertEquals(stochasticCalculator.calc(Collections.singletonList(Candlestick.builder().build()))
-                , StochasticCalculator.Advice.STAY);
+                , Advice.STAY);
     }
 
     @Test
     public void shouldSellForRedAboveBlue() {
         assertEquals(stochasticCalculator.calc(negativeExample())
-                , StochasticCalculator.Advice.SELL);
+                , Advice.SELL);
     }
 
 
