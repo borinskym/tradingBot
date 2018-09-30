@@ -43,6 +43,21 @@ public class RestBinanceClient implements binanceClient {
         }
     }
 
+    @Override
+    public BinanceWallet getWallet() {
+        return null;
+    }
+
+    @Override
+    public void sell(double quantity) {
+
+    }
+
+    @Override
+    public void buy(double quantity) {
+
+    }
+
     private List<Candlestick> retrieveCandlesticksFromBody(JsonArray candlesticksJson) {
         List<Candlestick> candlesticks = new ArrayList<>();
 
