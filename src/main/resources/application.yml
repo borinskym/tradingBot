@@ -1,0 +1,3 @@
+binance:
+  host: https://api.binance.com
+  getCandlestickPath: /api/v1/klines?symbol=BTCUSDT&interval=4h
