@@ -1,31 +1,33 @@
 package calculator;
 
 import binance.Candlestick;
-import com.sun.xml.internal.bind.v2.TODO;
 
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class StochasticCalculator {
     enum Advice {BUY, SELL, STAY}
 
-    int threshHold;
+    private int threshHold;
 
     public StochasticCalculator(int threshHold) {
         this.threshHold = threshHold;
     }
 
     Advice calc(List<Candlestick> candlesticks) {
-        if (isLessThenThreshHold(candlesticks))
-            return Advice.STAY;
-        else {
-            double result = getStochasticCalc(candlesticks);
-            if (isCross(result))
-                return Advice.STAY;
-            else if (isRedAboveBlue(result))
-                return Advice.SELL;
-            else
-                return Advice.BUY;
-        }
+        return isLessThenThreshHold(candlesticks)?  Advice.STAY :
+                adviceForSufficientInput(candlesticks);
+    }
+
+    private Advice adviceForSufficientInput(List<Candlestick> candlesticks) {
+        double result = getStochasticCalc(candlesticks);
+        return isCross(result) ? Advice.STAY : adviceForNotCrossResult(result);
+
+    }
+
+    private Advice adviceForNotCrossResult(double result) {
+        return isRedAboveBlue(result) ? Advice.SELL : Advice.BUY;
     }
 
     private boolean isLessThenThreshHold(List<Candlestick> candlesticks) {
@@ -49,23 +51,23 @@ public class StochasticCalculator {
     }
 
     private double getHighestOfInterval(List<Candlestick> candlesticks) {
-        double result = getCurrentCandle(candlesticks).getLow();
-        for (int i = 1; i < 14; i++) {
-            double currLow = candlesticks.get(candlesticks.size() - 1 - i).getHigh();
-            if (currLow > result)
-                result = currLow;
-        }
-        return result;
+        return getExtremePointOfInterval(candlesticks, Candlestick::getHigh,(result, current)-> result < current);
+
     }
 
     private double getLowestOfInterval(List<Candlestick> candlesticks) {
-        double result = getCurrentCandle(candlesticks).getLow();
+        return getExtremePointOfInterval(candlesticks, Candlestick::getLow,(result, current)->result > current);
+    }
+
+    private double getExtremePointOfInterval(List<Candlestick> candlesticks, Function<Candlestick, Double> getExtremePoint, BiFunction<Double, Double, Boolean> condition) {
+        double result = getExtremePoint.apply(getCurrentCandle(candlesticks));
         for (int i = 1; i < 14; i++) {
-            double currLow = candlesticks.get(candlesticks.size() - 1 - i).getLow();
-            if (currLow < result)
-                result = currLow;
+            double currExtremeValue = getExtremePoint.apply(candlesticks.get(candlesticks.size() - 1 - i));
+            if (condition.apply(result, currExtremeValue))
+                result = currExtremeValue;
         }
         return result;
+
     }
 
     private Candlestick getCurrentCandle(List<Candlestick> candlesticks) {
