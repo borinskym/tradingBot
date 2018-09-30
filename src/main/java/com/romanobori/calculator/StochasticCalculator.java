@@ -1,6 +1,6 @@
-package calculator;
+package com.romanobori.calculator;
 
-import binance.Candlestick;
+import com.romanobori.binance.Candlestick;
 
 import java.util.List;
 import java.util.function.BiFunction;

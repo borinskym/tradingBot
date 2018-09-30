@@ -1,4 +1,4 @@
-package binance;
+package com.romanobori.binance;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package binance;
+package com.romanobori.binance;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 public class RestBinanceClientTest {
 
     RestTemplate restTemplate = mock(RestTemplate.class);
-    String binanceHost = "http://binance";
+    String binanceHost = "http://com.romanobori.binance";
     String getcandelstickPath = "path";
 
     RestBinanceClient restBinanceClient = new RestBinanceClient(restTemplate, binanceHost, getcandelstickPath);

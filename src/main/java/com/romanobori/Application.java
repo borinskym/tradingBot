@@ -1,4 +1,4 @@
-package calculator;
+package com.romanobori;
 
 
 import org.springframework.boot.SpringApplication;

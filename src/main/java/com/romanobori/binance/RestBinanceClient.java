@@ -1,4 +1,4 @@
-package binance;
+package com.romanobori.binance;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -22,8 +22,8 @@ public class RestBinanceClient implements binanceClient {
 
     @Autowired
     public RestBinanceClient(RestTemplate restTemplate,
-                             @Value("${binance.host}") String binanceHost,
-                             @Value("${binance.getCandlestickPath}") String getCandlestickPath) {
+                             @Value("${com.romanobori.binance.host}") String binanceHost,
+                             @Value("${com.romanobori.binance.getCandlestickPath}") String getCandlestickPath) {
         this.restTemplate = restTemplate;
         this.binanceHost = binanceHost;
         this.getCandlestickPath = getCandlestickPath;
@@ -35,7 +35,7 @@ public class RestBinanceClient implements binanceClient {
             ResponseEntity<JsonArray> response = restTemplate.getForEntity(binanceHost + getCandlestickPath, JsonArray.class);
 
             if (response.getStatusCode() != HttpStatus.OK) {
-                throw new BinanceException("didnt success get candelsticks from binance");
+                throw new BinanceException("didnt success get candelsticks from com.romanobori.binance");
             }
             return retrieveCandlesticksFromBody(response.getBody());
         } catch (RestClientException e) {

@@ -1,4 +1,4 @@
-package binance;
+package com.romanobori.binance;
 
 import java.util.List;
 

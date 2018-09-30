@@ -1,14 +1,11 @@
-package calculator;
+package com.romanobori.calculator;
 
-import binance.Candlestick;
+import com.romanobori.binance.Candlestick;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class StochasticCalculatorTest {
     StochasticCalculator stochasticCalculator = new StochasticCalculator(16);
