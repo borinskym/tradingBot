@@ -20,6 +20,11 @@ public class RestBinanceClient implements binanceClient {
     private String binanceHost;
     private String getCandlestickPath;
 
+    public void sell(){};
+    public void buy(){};
+    public boolean isInMarket(){
+        return true;
+    };
     @Autowired
     public RestBinanceClient(RestTemplate restTemplate,
                              @Value("${com.romanobori.binance.host}") String binanceHost,
