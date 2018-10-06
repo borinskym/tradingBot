@@ -1,36 +1,38 @@
 package com.romanobori.calculator;
 
-import com.romanobori.calculator.Advice;
-
-import java.util.Arrays;
+import com.romanobori.binance.BinanceClient;
 
 public class AdviceToAction {
     enum Action {BUY, SELL, STAY}
     private Advice advice;
-    private boolean isInMarket;
-    public AdviceToAction(Advice advice,boolean isInMarket) {
+    BinanceClient client;
+    public AdviceToAction(Advice advice, BinanceClient client) {
         this.advice = advice;
-        this.isInMarket = isInMarket;
+        this.client = client;
+
     }
 
+    public void trade(){
 
-    public Action getAction(){
-        return isInMarket ? inMarketAction() : outOfMarketAction();
+        if(client.isInMarket())
+             inMarketAction();
+        else
+             outOfMarketAction();
     }
 
-    private Action outOfMarketAction() {
-        return isSellOrStay() ? Action.STAY : Action.BUY;
+    private void outOfMarketAction() {
+        if(isBuyAdvice()) client.buy();
     }
 
-    private Action inMarketAction() {
-        return isBuyOrStay() ? Action.STAY : Action.SELL;
+    private void inMarketAction() {
+        if(isSellAdvice()) client.sell();
     }
 
-    private boolean isBuyOrStay() {
-        return Arrays.asList(Advice.BUY, Advice.STAY).contains(advice);
+    private boolean isBuyAdvice() {
+        return advice == Advice.BUY;
     }
 
-    private boolean isSellOrStay() {
-        return Arrays.asList(Advice.SELL, Advice.STAY).contains(advice);
+    private boolean isSellAdvice() {
+        return advice == Advice.SELL;
     }
 }
