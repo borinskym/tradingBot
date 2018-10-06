@@ -5,9 +5,9 @@ import java.util.List;
 public interface binanceClient {
 
     List<Candlestick> getCandlesticks();
-    void sell();
-    void buy();
-    boolean isInMarket();
+    BinanceWallet getWallet();
+    public void sell(double quantity);
+    public void buy(double quantity);
 
     public class BinanceException extends RuntimeException{
 
