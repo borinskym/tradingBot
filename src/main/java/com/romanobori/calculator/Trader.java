@@ -21,7 +21,7 @@ public class Trader {
     }
 
     private void tradeIteration() {
-       /**
+
         AdviceToAction.Action action = new AdviceToAction(new StochasticCalculator(16)
                 .calc(client.getCandlesticks()), client.isInMarket()).getAction();
 
@@ -30,7 +30,7 @@ public class Trader {
         } else if (action.equals(AdviceToAction.Action.SELL)) {
             client.sell();
         }
-      */
+
         //I think this is need to be extracted to class ^^
     }
 }
