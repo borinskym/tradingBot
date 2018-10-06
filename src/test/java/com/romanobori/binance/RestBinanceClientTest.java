@@ -49,11 +49,10 @@ public class RestBinanceClientTest {
 
         assertEquals(1, candlesticks.size());
         assertThat(candlesticks.get(0), is(expectedCandlestick()));
-
     }
 
 
-    @Test(expected = binanceClient.BinanceException.class)
+    @Test(expected = BinanceClient.BinanceException.class)
     public void shouldFailWhenStatusReturnedNotOK() {
         when(restTemplate.getForEntity(binanceHost + getcandelstickPath, JsonArray.class))
                 .thenReturn(ResponseEntity.badRequest().build());
@@ -62,7 +61,7 @@ public class RestBinanceClientTest {
 
     }
 
-    @Test(expected = binanceClient.BinanceException.class)
+    @Test(expected = BinanceClient.BinanceException.class)
     public void shouldRaiseError_WhenFailFetchRestTemplate() {
         when(restTemplate.getForEntity(binanceHost + getcandelstickPath, JsonArray.class))
                 .thenThrow(new RestClientException("rest client exception"));
