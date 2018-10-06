@@ -1,38 +1,65 @@
 package com.romanobori.calculator;
 
+import com.romanobori.binance.BinanceClient;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 public class AdviceToActionTest {
+    private BinanceClient client = mock(BinanceClient.class);
+
     @Test
-    public void shouldBuyIfOutOfMarketAndAdviceIsBuy(){
-        assertEquals(AdviceToAction.Action.BUY,
-                new AdviceToAction(Advice.BUY,false).getAction());
+    public void shouldBuyIfOutOfMarketAndAdviceIsBuy() {
+        when(client.isInMarket()).thenReturn(false);
+        new AdviceToAction(Advice.BUY, client).trade();
+
+        verify(client, times(1)).buy();
+        verify(client, never()).sell();
     }
+
     @Test
-    public void shouldStayIfOutOfMarketAndAdviceIsSell(){
-        assertEquals(AdviceToAction.Action.STAY,
-                new AdviceToAction(Advice.SELL,false).getAction());
+    public void shouldStayIfOutOfMarketAndAdviceIsSell() {
+        when(client.isInMarket()).thenReturn(false);
+        new AdviceToAction(Advice.SELL, client).trade();
+
+        verify(client, never()).buy();
+        verify(client, never()).sell();
     }
+
     @Test
-    public void shouldStayIfOutOfMarketAndAdviceIsStay(){
-        assertEquals(AdviceToAction.Action.STAY,
-                new AdviceToAction(Advice.STAY,false).getAction());
+    public void shouldStayIfOutOfMarketAndAdviceIsStay() {
+        when(client.isInMarket()).thenReturn(false);
+        new AdviceToAction(Advice.STAY, client).trade();
+
+        verify(client, never()).buy();
+        verify(client, never()).sell();
     }
+
     @Test
-    public void shouldStayIfInMarketAndAdviceIsBuy(){
-        assertEquals(AdviceToAction.Action.STAY,
-                new AdviceToAction(Advice.BUY,true).getAction());
+    public void shouldStayIfInMarketAndAdviceIsBuy() {
+        when(client.isInMarket()).thenReturn(true);
+        new AdviceToAction(Advice.BUY, client).trade();
+
+        verify(client, never()).buy();
+        verify(client, never()).sell();
     }
+
     @Test
-    public void shouldSellIfInMarketAndAdviceIsSell(){
-        assertEquals(AdviceToAction.Action.SELL,
-                new AdviceToAction(Advice.SELL,true).getAction());
+    public void shouldSellIfInMarketAndAdviceIsSell() {
+        when(client.isInMarket()).thenReturn(true);
+        new AdviceToAction(Advice.SELL, client).trade();
+
+        verify(client, never()).buy();
+        verify(client, times(1)).sell();
     }
+
     @Test
-    public void shouldStayIfInMarketAndAdviceIsStay(){
-        assertEquals(AdviceToAction.Action.STAY,
-                new AdviceToAction(Advice.STAY,true).getAction());
+    public void shouldStayIfInMarketAndAdviceIsStay() {
+        when(client.isInMarket()).thenReturn(true);
+        new AdviceToAction(Advice.STAY, client).trade();
+
+        verify(client, never()).buy();
+        verify(client, never()).sell();
     }
 }

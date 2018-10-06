@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class RestBinanceClient implements binanceClient {
+public class RestBinanceClient implements BinanceClient {
 
     private RestTemplate restTemplate;
     private String binanceHost;
