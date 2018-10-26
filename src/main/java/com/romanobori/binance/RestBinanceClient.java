@@ -2,21 +2,27 @@ package com.romanobori.binance;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.romanobori.time.TimeCalculator;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class RestBinanceClient implements BinanceClient {
 
     private RestTemplate restTemplate;
+    private TimeCalculator timeCalculator;
+    private String orderPath;
+    private String privateKey;
+    private String publicKey;
     private String binanceHost;
     private String getCandlestickPath;
 
@@ -27,11 +33,19 @@ public class RestBinanceClient implements BinanceClient {
     };
     @Autowired
     public RestBinanceClient(RestTemplate restTemplate,
+                             TimeCalculator timeCalculator,
                              @Value("${com.romanobori.binance.host}") String binanceHost,
-                             @Value("${com.romanobori.binance.getCandlestickPath}") String getCandlestickPath) {
+                             @Value("${com.romanobori.binance.getCandlestickPath}") String getCandlestickPath,
+                             @Value("${com.romanobori.binance.orderPath}") String orderPath,
+                             @Value("${com.romanobori.binance.privateKey}") String privateKey,
+                             @Value("${com.romanobori.binance.publicKey}") String publicKey) {
         this.restTemplate = restTemplate;
         this.binanceHost = binanceHost;
         this.getCandlestickPath = getCandlestickPath;
+        this.timeCalculator = timeCalculator;
+        this.orderPath = orderPath;
+        this.privateKey = privateKey;
+        this.publicKey = publicKey;
     }
 
     @Override
@@ -55,12 +69,32 @@ public class RestBinanceClient implements BinanceClient {
 
     @Override
     public void sell(double quantity) {
-
+        restTemplate.exchange(binanceHost + orderPath + "?" + createPathForTrade(quantity, "SELL"), HttpMethod.POST, new HttpEntity<>(createHeaders()), String.class);
     }
 
     @Override
     public void buy(double quantity) {
+        restTemplate.exchange(binanceHost + orderPath + "?" + createPathForTrade(quantity, "BUY"), HttpMethod.POST, new HttpEntity<>(createHeaders()), String.class);
+    }
 
+    private HttpHeaders createHeaders() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("X-MBX-APIKEY", publicKey);
+        return headers;
+    }
+
+    private String createPathForTrade(double quantity, String side) {
+        return new QueryStringBuilder(
+                Arrays.asList(
+                        Pair.of("symbol", "BTCUSD"),
+                        Pair.of("side", side),
+                        Pair.of("type", "MARKET"),
+                        Pair.of("timeInForce", "GTC"),
+                        Pair.of("quantity", Double.toString(quantity)),
+                        Pair.of("recvWindow", Integer.toString(5000)),
+                        Pair.of("timestamp", Long.toString(timeCalculator.calcTime()))),
+                privateKey
+        ).execute();
     }
 
     private List<Candlestick> retrieveCandlesticksFromBody(JsonArray candlesticksJson) {
